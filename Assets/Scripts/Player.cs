@@ -59,6 +59,15 @@ public class Player : MonoBehaviour
             AudioManager.Instance.PlaySound(_moveClip);
             speed *= -1;
         }
+
+        if (Input.touches.Length > 0)
+        {
+            if (Input.touches[0].phase == TouchPhase.Began)
+            {
+                AudioManager.Instance.PlaySound(_moveClip);
+                speed *= -1;
+            }
+        }
     }
 
     private void FixedUpdate()

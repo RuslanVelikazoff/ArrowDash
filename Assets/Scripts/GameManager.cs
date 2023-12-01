@@ -55,7 +55,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //AudioManager.Instance.AddButtonSound();
         score = 0;
         _scoreText.text = score.ToString();
         hasGameFinished = false;
